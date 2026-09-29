@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "creation": "2026-09-29 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "enable_auto_parsing",
+  "min_fit_threshold",
+  "qdrant_section",
+  "qdrant_url",
+  "qdrant_api_key",
+  "embedding_section",
+  "embedding_model"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General Configuration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_auto_parsing",
+   "fieldtype": "Check",
+   "label": "Enable Auto Parsing on Resume Upload"
+  },
+  {
+   "default": "50",
+   "fieldname": "min_fit_threshold",
+   "fieldtype": "Int",
+   "label": "Minimum Fit Score Threshold (%)"
+  },
+  {
+   "fieldname": "qdrant_section",
+   "fieldtype": "Section Break",
+   "label": "Vector Database (Qdrant)"
+  },
+  {
+   "description": "Leave blank to use in-memory vector storage for testing, or enter Qdrant endpoint.",
+   "fieldname": "qdrant_url",
+   "fieldtype": "Data",
+   "label": "Qdrant URL (e.g. http://localhost:6333)"
+  },
+  {
+   "fieldname": "qdrant_api_key",
+   "fieldtype": "Password",
+   "label": "Qdrant API Key"
+  },
+  {
+   "fieldname": "embedding_section",
+   "fieldtype": "Section Break",
+   "label": "Embedding Model"
+  },
+  {
+   "default": "sentence-transformers/all-mpnet-base-v2",
+   "fieldname": "embedding_model",
+   "fieldtype": "Data",
+   "label": "SentenceTransformer Model Name"
+  }
+ ],
+ "issingle": 1,
+ "module": "Talent Matcher",
+ "name": "Talent Matcher Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
